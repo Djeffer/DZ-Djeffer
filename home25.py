@@ -13,29 +13,9 @@ import os
 
 #  Задание №2
 
-# files = r'test_dir'
-# f1 = os.listdir(files)
-# print(f"{f1}")
+files = r'test_dir'
+f1 = os.listdir(files)
+print(f"{f1}")
 
+#  Задание №
 
-
-# path = r'test_dir'
-# for dirs, folder, files in os.walk(path):
-#     f1 = dirs
-#     f2 = folder
-#     f3 = files
-
-
-#  Задание №3
-
-
-def print_free(root):
-    for rot, dirs, files in os.walk(root, topdown=True):
-        if rot == root:
-            for i in dirs:
-                print(i)
-            for j in files:
-                print(j, os.path.getsize(rot + "\\" + j), 'byte')
-
-
-print_free(r'test_dir')
