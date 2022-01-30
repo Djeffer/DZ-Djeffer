@@ -26,5 +26,5 @@ class Point3D:
         self.z = z
 
 
-pt = Point3D(1, 2, 3)
-print(pt.__dict__)
+p = Point3D(1, 2, 3)
+print(p.__dict__)
