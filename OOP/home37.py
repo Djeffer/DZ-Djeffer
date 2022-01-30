@@ -1,8 +1,8 @@
 class Func:
     @classmethod
-    def verify_coord(cls, number):
+    def verify(cls, number):
         if type(number) != int:
-            raise TypeError("Координата должна быть целым числом")
+            raise TypeError("Координата должна быть целочисленным значением")
 
     def __set_name__(self, owner, name):
         self.name = "_" + name
@@ -11,7 +11,7 @@ class Func:
         return instance.__dict__[self.name]
 
     def __set__(self, instance, value):
-        self.verify_coord(value)
+        self.verify(value)
         instance.__dict__[self.name] = value
 
 
