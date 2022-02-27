@@ -25,7 +25,7 @@ class Parser:
                 prices.append((int(price1) + int(price2)) / 2)
             else:
                 prices.append(int(price1))
-        return prices
+        return sum(prices) / len(prices)
 
     def run(self):
         self.get_html()
@@ -36,9 +36,8 @@ j = 0
 av = []
 for i in range(16):
     pars = Parser(f'https://www.e-katalog.ru/list/206/{i}/')
-    av = pars.run()
+    av.append(pars.run())
     j += 1
-
 
 print(f'На {j} страницах, средния цена: {round(sum(av) / len(av), 2)} rub')
 
