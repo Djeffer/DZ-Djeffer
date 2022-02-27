@@ -53,7 +53,7 @@ class Interface:
     def watching_one_movie(self, film):
         for key in film:
             if key == 'длительность':
-                print(f'{key} фильма - {film[key]} минут')
+                print(f'{key} фильма - {film[key]} мин.')
             elif key == 'год выпуска':
                 print(f'{key} фильма - {film[key]}г.')
             else:
